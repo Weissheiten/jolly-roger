@@ -1,36 +1,39 @@
 <?php
+
+namespace Weissheiten\JollyRoger;
+
+require('./vendor/autoload.php');
+
+use TYPO3Fluid\Fluid\View\TemplateView;
+
 /**
  * Weissheiten Adventure Path: JollyRoger
  */
 
 /*
- * @param string $greeting the greeting which should be shout from the crows nest *
- * @return string complete HTML template including the greeting
+ * @return \TYPO3Fluid\Fluid\View\TemplateView
  */
-function shout($greeting) : string
-{
-    /**
-     *  use a heredoc to create a multiline HTML template
-     *  http://php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc
-     */
-    $template = <<<EOT
-    <html>
-    <head>
-        <title>Crowsnest of Captain Whitebeard</title>
-    </head>
-    <body>
-        <h1>###greeting###</h1>
-    </body>
-    </html>        
-EOT;
+function initializeFluid(){
+    // Initializing the View: rendering in Fluid takes place through a View instance
+    // which contains a RenderingContext that in turn contains things like definitions
+    // of template paths, instances of variable containers and similar.
+    $view = new \TYPO3Fluid\Fluid\View\TemplateView();
 
-    return str_replace(
-        "###greeting###",
-        $greeting,
-        $template
-    );
+    // TemplatePaths object: a subclass can be used if custom resolving is wanted.
+    $paths = $view->getTemplatePaths();
+
+    $paths->setTemplatePathAndFilename(__DIR__ . '/Resources/Private/Templates/index.html');
+
+    return $view;
 }
 
 // store the greeting in a variable
 $greeting = "Crows nest built successfully Mr. Mac Mugmasher!";
-echo shout($greeting);
+
+// get a new Fluid View
+$fluidView = initializeFluid();
+// assign the greeting
+$fluidView->assign('greeting', $greeting);
+
+// output the rendered view
+echo $fluidView->render();
