@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "14a57cf4cc8dc1a2ee18d24d3c7110c2",
+    "hash": "d9ca03a99a5c9e63c1768e4683a54fee",
+    "content-hash": "00d13305d76a6671f3f359b86020b410",
     "packages": [
         {
             "name": "typo3fluid/fluid",
@@ -43,7 +44,7 @@
                 "LGPL-3.0"
             ],
             "description": "The TYPO3 Fluid template rendering engine",
-            "time": "2017-05-16T13:28:55+00:00"
+            "time": "2017-05-16 13:28:55"
         }
     ],
     "packages-dev": [],
@@ -52,6 +53,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.0"
+    },
     "platform-dev": []
 }

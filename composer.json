@@ -3,7 +3,11 @@
     "description": "Showcase package for advancing from plain PHP to a framework",
     "type": "project",
     "require": {
+        "php": "^7.0",
         "typo3fluid/fluid": "2.*"
+    },
+    "autoload": {
+        "psr-4": { "Weissheiten\\JollyRoger\\": "src/" }
     },
     "authors": [
         {

@@ -5,6 +5,7 @@ namespace Weissheiten\JollyRoger;
 require('./vendor/autoload.php');
 
 use TYPO3Fluid\Fluid\View\TemplateView;
+use Weissheiten\JollyRoger;
 
 /**
  * Weissheiten Adventure Path: JollyRoger
@@ -30,10 +31,18 @@ function initializeFluid(){
 // store the greeting in a variable
 $greeting = "Crows nest built successfully Mr. Mac Mugmasher!";
 
+$flags[] = new Flag("JollyRoger","#000", 20, 10);
+$flags[] = new Flag("Merchantflag","#00F", 20, 15);
+
 // get a new Fluid View
 $fluidView = initializeFluid();
 // assign the greeting
-$fluidView->assign('greeting', $greeting);
+$fluidView->assignMultiple(
+    array(
+        'greeting' => $greeting,
+        'flags' => $flags
+    )
+);
 
 // output the rendered view
 echo $fluidView->render();
