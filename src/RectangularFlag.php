@@ -2,10 +2,11 @@
 
 namespace Weissheiten\JollyRoger;
 
-class Flag{
+use Weissheiten\JollyRoger\Interfaces;
+use Weissheiten\JollyRoger\Abstracts;
 
-    private $name;
-    private $color;
+class RectangularFlag extends Abstracts\AbstractFlag implements Interfaces\FlagInterface {
+
     private $width;
     private $height;
 
@@ -17,20 +18,6 @@ class Flag{
         $this->color = $color;
         $this->width = $width;
         $this->height = $height;
-    }
-
-    /*
-     * @return string
-     */
-    public function getName() : string{
-        return $this->name;
-    }
-
-    /*
-     * @return string
-     */
-    public function getColor() : string{
-        return $this->color;
     }
 
     /*

@@ -3,7 +3,7 @@ Demo showcase for presenting the migration from a plain PHP to techniques a  PHP
 
 under development...
 
-Notes for Task 3 (german, under development)
+### Notes for Task 3 (german, under development)
 * Stellen Sie über das Composer file sicher, dass PHP in der Version 7 verwendet wird
 * Fügen Sie in Ihrem Composer File die notwendigen Einträge hinzu, damit Sie autoloading für ihre eigenen Klassen verwenden können (Beispiel: https://github.com/Weissheiten/PHPGrundlagenMitschrift/blob/master/composer.json)
    (vergessen Sie nicht den Composer update Befehl danach, damit die Autoload Klassen neu geschrieben werden)
@@ -18,3 +18,21 @@ Notes for Task 3 (german, under development)
 * Stellen Sie mittels "use" und entsprechender namespace Verwendung sicher, dass Sie Ihre neue Fahnenklasse in der index.php verwenden können
 * Erstellen Sie 2 neue Fahnen (eine Piratenflagge und eine Handelsflagge) und speichern Sie diese in einem Array
 * Geben Sie alle Informationen zu den Fahnen mit Hilfe von Fluid aus. Hinterlegen Sie die Bezeichnung der Flagge mit der Flaggenfarbe. (TIP: Fluid kann auf getter von Objekten zugreifen - zB getSomething() kann in Fluid mit .something aufgerufen werden)
+
+### Notes for Task 4 (german, under development)
+Derzeit können Sie Flaggen einer einzelnen Form anlegen und ausgeben - es wird jedoch die Möglichkeit benötigt, Flaggen in den Formen eines Quadrats, eines Rechtecks und eines gleichseitigen Dreiecks anzulegen.
+Stellen Sie für Ihr Programm die folgenden Funktionalitäten sicher:
+* Jede Flagge verfügt weiterhin über einen Namen und eine Farbe (verwenden Sie eine geeignete Methode um sicherzustellen, dass der Name und die Farbe der Flagge nicht in mehreren Klassen definiert werden muss)
+* Es muss programmiertechnisch sichergestellt werden, dass alle Flaggen aller Formen über eine Funktion verfügen, die den korrekten Flächeninhalt berechnet
+* Die Funktionsaufrufe für das Auslesen des Flächeninhalts und des Namens der Flaggen muss gleich bleiben
+* An den View sollen eine rechteckige Piratenflagge, eine dreieckige Handelsflagge und eine quadratische Landesflagge übergeben werden
+
+Beispiel:
+Folgender Beispielcode könnte bis jetzt verwendet worden sein um alle Flaggen auszugeben:
+```
+        <f:for each="{flags}" as="flag">
+            <li style="background-color:{flag.color};color: white">{flag.name} - {flag.area}cm²</li>
+        </f:for> 
+``` 
+Dieser Code soll sich nicht ändern - verwenden Sie abstrakte Klasssen und Interfaces um sicherzustellen, dass die Funktionen in den jeweiligen Flaggenklassen für Dreieck, Quadrad und Rechteck richtig implementiert sind.
+

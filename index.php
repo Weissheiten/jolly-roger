@@ -31,8 +31,9 @@ function initializeFluid(){
 // store the greeting in a variable
 $greeting = "Crows nest built successfully Mr. Mac Mugmasher!";
 
-$flags[] = new Flag("JollyRoger","#000", 20, 10);
-$flags[] = new Flag("Merchantflag","#00F", 20, 15);
+$flags[] = new RectangularFlag("JollyRoger","#000", 20, 10);
+$flags[] = new TriangleFlag("Merchantflag","#00F", 20);
+$flags[] = new SquareFlag('CountryFlag', "#F00", 20);
 
 // get a new Fluid View
 $fluidView = initializeFluid();
