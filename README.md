@@ -3,6 +3,40 @@ Demo showcase for presenting the migration from a plain PHP to techniques a  PHP
 
 under development...
 
+### Notes for Task 1
+Get a local development server up and running. (e.g.: XAMPP) 
+Required Server Properties: 
+* A webserver (e.g. Apache or nginx) 
+* PHP 7.1 
+* A database (preferably MySQL) 
+* Be able to execute PHP from the command line that outputs “Crows nest built successfully Mr. Mac Mugmasher!” on the console 
+* Be able to call a PHP webpage (index.php) on your local server that outputs the text “Crows nest built successfully Mr. Mac Mugmasher!” on a well formed HTML5 page inside a headline tag. 
+
+Extra Aufgaben
+* Change the port on which the webserver is listening from 80 to 87
+* Increase the maximum execution time for a PHP script on your server from 30 to 60 seconds (Test it with an infinite loop or non-infinite loop that takes longer than the allowed execution time) 
+* Install a PHP Codesniffer with pear and check the well-formedness of your code. 
+* Alter your setup in order to be directed to the main file (index.php) on your localhost when inputting http://crowsnest.local/index.php in your browser. 
+
+### Notes for Task 2
+Task
+Use the Fluid templating engine PHP package to output the sentence “Crows nest built successfully Mr. Mac Mugmasher!”
+The template must be available as HTML File, so even people not proficient in PHP have an easy way of editing them.
+
+Steps
+* Check out what composer is (if you don’t already know it) and how it works (https://getcomposer.org/)
+* Go to your XAMPP directory with the index.php file and initialise a new composer project
+* Require the package https://github.com/TYPO3/Fluid for your composer project
+* Install all dependencies
+* Use the composer autoloading file to allow the use of namespaces and use namespaces in your index.php file for including classes
+* Create a new instance of \TYPO3Fluid\Fluid\View\TemplateView and assign a new HTML template to it
+* Introduce a variable (e.g.: “greeting”) in your View and render it by assigning the greeting to the view
+
+A good example can be found at:
+https://github.com/TYPO3/Fluid/blob/master/examples/example_variables.php
+(mind that you only need one variable assigned and not multiples)
+
+
 ### Notes for Task 3 (german, under development)
 * Stellen Sie über das Composer file sicher, dass PHP in der Version 7 verwendet wird
 * Fügen Sie in Ihrem Composer File die notwendigen Einträge hinzu, damit Sie autoloading für ihre eigenen Klassen verwenden können (Beispiel: https://github.com/Weissheiten/PHPGrundlagenMitschrift/blob/master/composer.json)
