@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d9ca03a99a5c9e63c1768e4683a54fee",
     "content-hash": "00d13305d76a6671f3f359b86020b410",
     "packages": [
         {
             "name": "typo3fluid/fluid",
-            "version": "2.3.4",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/Fluid.git",
-                "reference": "a409981a5a7f64ac113cbfb5f6544bf1362fbffa"
+                "reference": "f583badd3b2a90f046fe5c1e0459300325a3e0ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/Fluid/zipball/a409981a5a7f64ac113cbfb5f6544bf1362fbffa",
-                "reference": "a409981a5a7f64ac113cbfb5f6544bf1362fbffa",
+                "url": "https://api.github.com/repos/TYPO3/Fluid/zipball/f583badd3b2a90f046fe5c1e0459300325a3e0ce",
+                "reference": "f583badd3b2a90f046fe5c1e0459300325a3e0ce",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +43,7 @@
                 "LGPL-3.0"
             ],
             "description": "The TYPO3 Fluid template rendering engine",
-            "time": "2017-05-16 13:28:55"
+            "time": "2017-08-25T10:10:42+00:00"
         }
     ],
     "packages-dev": [],
